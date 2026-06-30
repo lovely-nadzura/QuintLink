@@ -418,15 +418,13 @@
         if (count($testimonials) > 0):
           foreach ($testimonials as $t):
         ?>
-        <div class="bg-white rounded-xl shadow-lg p-5 w-80 flex-shrink-0 transition hover:shadow-xl">
-          <div class="flex items-center gap-3 mb-3">
-            <?php if($t['foto_bukti'] && file_exists("assets/images/testimonials/" . $t['foto_bukti'])): ?>
-              <img src="assets/images/testimonials/<?= $t['foto_bukti'] ?>" class="w-12 h-12 rounded-full object-cover border-2 border-[#0D9488]">
-            <?php else: ?>
-              <div class="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center text-gray-600 font-bold">
-                <?= strtoupper(substr($t['nama'], 0, 1)) ?>
-              </div>
-            <?php endif; ?>
+        <div class="bg-white rounded-xl shadow-lg p-5 w-72 flex-shrink-0 transition hover:shadow-xl flex flex-col">
+          <!-- Header: Nama + Rating -->
+          <div class="flex items-center gap-3 mb-2">
+            <!-- Inisial nama (tetap dipertahankan sebagai placeholder) -->
+            <div class="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center text-gray-600 font-bold text-sm flex-shrink-0">
+              <?= strtoupper(substr($t['nama'], 0, 1)) ?>
+            </div>
             <div>
               <h4 class="font-bold text-gray-800"><?= htmlspecialchars($t['nama']) ?></h4>
               <div class="flex text-yellow-500 text-sm">
@@ -434,7 +432,21 @@
               </div>
             </div>
           </div>
-          <p class="text-gray-600 text-sm italic">"<?= nl2br(htmlspecialchars($t['komentar'])) ?>"</p>
+
+          <!-- Komentar -->
+          <p class="text-gray-600 text-sm italic mb-3 flex-grow">"<?= nl2br(htmlspecialchars($t['komentar'])) ?>"</p>
+
+          <!-- Foto Bukti (screenshot WhatsApp) -->
+          <?php if($t['foto_bukti'] && file_exists("assets/images/testimonials/" . $t['foto_bukti'])): ?>
+            <div class="mt-2 border-t border-gray-200 pt-3">
+              <img src="assets/images/testimonials/<?= $t['foto_bukti'] ?>" 
+                   alt="Bukti percakapan WhatsApp" 
+                   class="w-full h-auto max-h-48 object-cover rounded-lg border border-gray-200 shadow-sm">
+            </div>
+          <?php else: ?>
+            <!-- Jika tidak ada foto, tampilkan placeholder kecil -->
+            <div class="mt-2 text-xs text-gray-400 italic">- tidak ada bukti -</div>
+          <?php endif; ?>
         </div>
         <?php
           endforeach;
@@ -444,6 +456,8 @@
         <?php endif; ?>
       </div>
     </div>
+  </div>
+</section>
 
     <!-- Optional: indikator scroll (bisa dihilangkan) -->
     <div class="flex justify-center gap-2 mt-4">
