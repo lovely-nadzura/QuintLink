@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuintLink - Digital Partner for UMKM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #FBF9F7; color: #2A2A30; }
+        :root {
+            --primary: #1C1C22;
+            --brand: #3A7D76;
+            --coral: #E57A6A;
+            --gold: #D4A373;
+            --neutral: #FBF9F7;
+            --text-dark: #2A2A30;
+            --text-light: #6B6A70;
+        }
+        .bg-primary { background-color: var(--primary); }
+        .text-primary { color: var(--primary); }
+        .bg-brand { background-color: var(--brand); }
+        .text-brand { color: var(--brand); }
+        .bg-coral { background-color: var(--coral); }
+        .text-coral { color: var(--coral); }
+        .bg-gold { background-color: var(--gold); }
+        .text-gold { color: var(--gold); }
+        .bg-neutral { background-color: var(--neutral); }
+        .border-brand { border-color: var(--brand); }
+        .border-coral { border-color: var(--coral); }
+        .btn-coral { background-color: var(--coral); color: white; }
+        .btn-coral:hover { background-color: #d16a5a; }
+        .btn-brand { background-color: var(--brand); color: white; }
+        .btn-brand:hover { background-color: #2e6a64; }
+        .hover\:text-brand:hover { color: var(--brand); }
+        .hover\:text-coral:hover { color: var(--coral); }
+        .hover\:bg-coral:hover { background-color: var(--coral); }
+        .shadow-coral { box-shadow: 0 8px 24px rgba(229, 122, 106, 0.25); }
+        .shadow-brand { box-shadow: 0 8px 24px rgba(58, 125, 118, 0.2); }
+    </style>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="bg-primary text-white fixed w-full z-50 top-0 shadow-lg">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <span class="text-2xl font-bold tracking-tight">QuintLink</span>
+            <span class="text-xs bg-gold px-2 py-0.5 rounded-full text-primary font-semibold">Tim 5</span>
+        </div>
+        <div class="hidden md:flex gap-6 items-center">
+            <a href="index.html" class="hover:text-gold transition">Beranda</a>
+            <a href="template.html" class="hover:text-gold transition">Template</a>
+            <a href="tentang.html" class="hover:text-gold transition">Tentang</a>
+            <a href="#" class="bg-coral text-white px-5 py-2 rounded-lg font-semibold hover:bg-[#d16a5a] transition shadow-coral">Konsultasi</a>
+        </div>
+        <button id="hamburger" class="md:hidden text-white text-2xl">☰</button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-primary pb-4 px-4 flex flex-col gap-3">
+        <a href="index.html" class="hover:text-gold transition">Beranda</a>
+        <a href="template.html" class="hover:text-gold transition">Template</a>
+        <a href="tentang.html" class="hover:text-gold transition">Tentang</a>
+        <a href="#" class="bg-coral text-white px-4 py-2 rounded-lg text-center font-semibold hover:bg-[#d16a5a] transition">Konsultasi</a>
+    </div>
+</nav>
+
+<!-- ========== HERO SECTION ========== -->
+<section class="pt-24 bg-gradient-to-br from-[#1C1C22] to-[#2C3A3A] text-white min-h-[90vh] flex items-center relative overflow-hidden">
+    <!-- Background deco -->
+    <div class="absolute top-20 right-10 w-64 h-64 bg-coral/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 left-10 w-80 h-80 bg-brand/10 rounded-full blur-3xl"></div>
+
+    <div class="container mx-auto px-4 py-12 relative z-10 flex flex-col md:flex-row items-center gap-10">
+        <div class="md:w-1/2 text-center md:text-left">
+            <div class="inline-flex items-center gap-2 bg-primary/60 backdrop-blur-sm border border-gold/30 px-4 py-1.5 rounded-full mb-4">
+                <i class="fas fa-hashtag text-gold text-xs"></i>
+                <span class="text-gold text-sm font-medium tracking-wide">DigitalPartnerUMKM</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+                Bikin Website Profesional <br>
+                <span class="text-brand">Sesimpel Ini</span>
+            <p class="text-gray-300 mt-4 text-lg leading-relaxed max-w-lg mx-auto md:mx-0">
+                Pilih template, atur desain sesuai keinginan, dan kami yang urus perawatannya.
+                <span class="text-gold font-medium block mt-1">Tanpa ribet, tanpa pusing teknis.</span>
+            </p>
+
+            <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+                <a href="#" class="bg-coral hover:bg-[#d16a5a] text-white px-6 py-2.5 rounded-xl font-semibold shadow-coral transition text-center flex items-center justify-center gap-2 text-sm md:text-base">
+                    <i class="fas fa-rocket text-sm"></i> Mulai Sekarang
+                </a>
+                <a href="#" class="border border-white/30 hover:bg-white/10 px-5 py-2.5 rounded-xl font-medium transition text-center flex items-center justify-center gap-2 text-sm md:text-base">
+                    <i class="fas fa-play-circle text-sm"></i> Lihat Cara Kerja
+                </a>
+            </div>
+
+            <!-- 3 Langkah Mudah (Visual untuk UMKM) - Versi BUKAN TOMBOL -->
+            <div class="mt-10 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 max-w-sm mx-auto md:mx-0">
+                <!-- Langkah 1 -->
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-brand/20 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-regular fa-copy text-brand text-sm"></i>
+                    </div>
+                    <span class="text-xs text-gray-300 font-medium">Pilih Template</span>
+                </div>
+
+                <!-- Panah pemisah (opsional, biar keliatan alur) -->
+                <div class="hidden sm:block text-gray-500 text-xs">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="sm:hidden text-gray-500 text-xs">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+
+                <!-- Langkah 2 -->
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-coral/20 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-regular fa-pen-to-square text-coral text-sm"></i>
+                    </div>
+                    <span class="text-xs text-gray-300 font-medium">Sesuaikan Desain</span>
+                </div>
+
+                <!-- Panah pemisah -->
+                <div class="hidden sm:block text-gray-500 text-xs">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="sm:hidden text-gray-500 text-xs">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+
+                <!-- Langkah 3 -->
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
+                        <i class="fa-regular fa-circle-check text-gold text-sm"></i>
+                    </div>
+                    <span class="text-xs text-gray-300 font-medium">Kami Rawat</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:w-1/2 flex justify-center">
+            <div class="relative">
+                <img src="assets/hero_img.png" class="rounded-2xl shadow-2xl border border-white/10">
+                <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-gold/20 rounded-full -z-10"></div>
+                <div class="absolute -top-4 -left-4 w-16 h-16 bg-coral/20 rounded-full -z-10"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== 3 PILAR LAYANAN (Catchy & Jelas) ========== -->
+<section class="py-20 bg-neutral">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-14">
+            <span class="inline-block bg-brand/10 text-brand px-4 py-1 rounded-full text-sm font-medium">Layanan Kami</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mt-3">Satu Platform, Tiga Solusi</h2>
+            <p class="text-text-light mt-2 max-w-xl mx-auto">Kami bantu UMKM go digital dengan cara yang paling mudah dipahami</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <!-- Card 1 -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-brand group">
+                <div class="w-16 h-16 bg-brand/10 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-brand/20 transition">
+                    <i class="fas fa-layer-group text-brand text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-primary">Template Siap Pakai</h3>
+                <p class="text-text-light mt-2 leading-relaxed">Pilih dari 15+ template modern untuk toko, kafe, jasa, atau budidaya.</p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="text-xs bg-neutral text-text-light px-3 py-1 rounded-full">Toko</span>
+                    <span class="text-xs bg-neutral text-text-light px-3 py-1 rounded-full">Kafe</span>
+                    <span class="text-xs bg-neutral text-text-light px-3 py-1 rounded-full">Ikan</span>
+                    <span class="text-xs bg-neutral text-text-light px-3 py-1 rounded-full">Jasa</span>
+                </div>
+                <a href="#" class="inline-flex items-center text-brand font-medium mt-5 hover:text-coral transition">
+                    Lihat Template <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-coral group">
+                <div class="w-16 h-16 bg-coral/10 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-coral/20 transition">
+                    <i class="fas fa-pen-fancy text-coral text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-primary">Custom UI/UX</h3>
+                <p class="text-text-light mt-2 leading-relaxed">Sesuaikan warna, layout, dan fitur sesuai branding bisnis Anda.</p>
+                <div class="mt-4 flex items-center gap-2 text-sm text-text-light">
+                    <i class="fas fa-check-circle text-gold text-xs"></i> Konsultasi desainer
+                    <span class="mx-1">·</span>
+                    <i class="fas fa-check-circle text-gold text-xs"></i> Revisi 3x
+                </div>
+                <a href="#" class="inline-flex items-center text-coral font-medium mt-5 hover:text-brand transition">
+                    Pelajari Custom <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-gold group">
+                <div class="w-16 h-16 bg-gold/10 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-gold/20 transition">
+                    <i class="fas fa-shield-alt text-gold text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-primary">Maintenance & Hosting</h3>
+                <p class="text-text-light mt-2 leading-relaxed">Kami rawat website Anda: update, backup, dan keamanan 24/7.</p>
+                <div class="mt-4 flex items-center gap-2 text-sm text-text-light">
+                    <i class="fas fa-check-circle text-gold text-xs"></i> Backup mingguan
+                    <span class="mx-1">·</span>
+                    <i class="fas fa-check-circle text-gold text-xs"></i> Support 24/7
+                </div>
+                <a href="#" class="inline-flex items-center text-gold font-medium mt-5 hover:text-brand transition">
+                    Cek Paket <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== TESTIMONI UMKM (Real & Relatable) ========== -->
+<section class="py-20 bg-primary text-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="inline-block bg-gold/20 text-gold px-4 py-1 rounded-full text-sm font-medium">Testimoni</span>
+            <h2 class="text-3xl font-bold mt-3">Apa Kata UMKM yang Sudah Pakai?</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full bg-coral/30 flex items-center justify-center text-xl font-bold">I</div>
+                    <div>
+                        <p class="font-semibold">Irfan - Fishan</p>
+                        <div class="text-gold text-sm">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                <p class="text-gray-300 mt-3 text-sm leading-relaxed">"Website Fishan sekarang kelihatan profesional. Pelanggan lebih percaya dan penjualan ikan meningkat!"</p>
+            </div>
+            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full bg-brand/30 flex items-center justify-center text-xl font-bold">S</div>
+                    <div>
+                        <p class="font-semibold">Siti - Warung Kopi</p>
+                        <div class="text-gold text-sm">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                <p class="text-gray-300 mt-3 text-sm leading-relaxed">"Dulu cuma pake WA, sekarang punya website sendiri. Pelanggan bisa lihat menu lengkap!"</p>
+            </div>
+            <div class="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full bg-gold/30 flex items-center justify-center text-xl font-bold">B</div>
+                    <div>
+                        <p class="font-semibold">Budi - Fotokopi</p>
+                        <div class="text-gold text-sm">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                <p class="text-gray-300 mt-3 text-sm leading-relaxed">"Template-nya gampang dipakai. Tim QuintLink bener-bener ngerti kebutuhan UMKM."</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CTA FINAL ========== -->
+<section class="py-20 bg-gradient-to-r from-coral/10 to-brand/10">
+    <div class="container mx-auto px-4 text-center">
+        <div class="max-w-2xl mx-auto bg-white p-10 rounded-3xl shadow-2xl border border-white/30">
+            <span class="inline-block bg-brand/10 text-brand px-4 py-1 rounded-full text-sm font-medium">🚀 Mulai Sekarang</span>
+            <h2 class="text-3xl font-bold text-primary mt-4">Siap Bikin Website UMKM-mu?</h2>
+            <p class="text-text-light mt-3">Konsultasi gratis 30 menit. Tim kami siap bantu dari nol sampai online.</p>
+            <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#" class="bg-coral hover:bg-[#d16a5a] text-white px-8 py-3 rounded-xl font-semibold shadow-coral transition inline-flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp"></i> Hubungi Via WA
+                </a>
+                <a href="#" class="border border-primary/20 hover:bg-primary/5 px-6 py-3 rounded-xl font-medium transition text-primary inline-flex items-center justify-center gap-2">
+                    <i class="fas fa-calendar-check"></i> Jadwalkan Konsultasi
+                </a>
+            </div>
+            <p class="text-xs text-text-light mt-4">*Tanpa biaya tersembunyi. Kami bantu pilih paket sesuai kebutuhan.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="bg-primary text-white/70 py-10 border-t border-white/10">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8 text-center md:text-left">
+            <div>
+                <h4 class="text-white font-bold text-lg mb-3">QuintLink</h4>
+                <p class="text-sm text-gray-400">Digital Partner UMKM Indonesia</p>
+                <p class="text-sm text-gray-400 mt-1">Tim 5 · Universitas Gunadarma</p>
+            </div>
+            <div>
+                <h5 class="text-white font-semibold mb-3">Layanan</h5>
+                <ul class="text-sm space-y-2">
+                    <li><a href="#" class="hover:text-gold transition">Template</a></li>
+                    <li><a href="#" class="hover:text-gold transition">Custom UI/UX</a></li>
+                    <li><a href="#" class="hover:text-gold transition">Maintenance</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-semibold mb-3">Perusahaan</h5>
+                <ul class="text-sm space-y-2">
+                    <li><a href="#" class="hover:text-gold transition">Tentang Kami</a></li>
+                    <li><a href="#" class="hover:text-gold transition">Tim 5</a></li>
+                    <li><a href="#" class="hover:text-gold transition">Kontak</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-semibold mb-3">Ikuti Kami</h5>
+                <div class="flex justify-center md:justify-start gap-4 text-xl">
+                    <a href="#" class="hover:text-gold transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-gold transition"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="hover:text-gold transition"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p class="text-xs text-gray-400 mt-4">© 2026 QuintLink. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('hamburger').addEventListener('click', function() {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+</script>
+
+</body>
+</html>
